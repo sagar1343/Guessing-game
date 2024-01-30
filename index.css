@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Great+Vibes&display=swap");
+:root {
+  --primary-color: #e1fbff;
+  --secondary-color: #00f2ff;
+  --font-color: #46494c;
+  --bottom-margin: 3rem;
+}
+body {
+  background-color: var(--primary-color);
+}
+html {
+  font-size: 10px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  padding-inline: 6rem;
+  padding-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  border: 1rem solid var(--secondary-color);
+  padding: 2rem;
+  background-color: white;
+  font-size: 5rem;
+  font-family: "Concert One", sans-serif;
+  margin-bottom: 2rem;
+}
+em {
+  font-size: 5rem;
+  font-family: "Great Vibes", cursive;
+}
+.message {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--bottom-margin);
+}
+.correctWord {
+  font-size: x-large;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: var(--bottom-margin);
+}
+.guessCount {
+  margin-bottom: var(--bottom-margin);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.guessWord {
+  margin-bottom: var(--bottom-margin);
+  font-size: 2rem;
+  font-weight: 600;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+input {
+  width: 4rem;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  border: 2px solid var(--secondary-color);
+  text-align: center;
+  outline: none;
+}
+button {
+  margin-top: var(--bottom-margin);
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  border: none;
+  color: white;
+  background-color: #ff9500;
+  font-size: 2rem;
+  font-weight: 800;
+  cursor: pointer;
+}
