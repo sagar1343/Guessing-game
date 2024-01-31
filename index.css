@@ -53,8 +53,10 @@ em {
 .correctWord {
   font-size: x-large;
   font-weight: 700;
-  color: var(--secondary-color);
   margin-bottom: var(--bottom-margin);
+}
+.correct-letter {
+  color: var(--secondary-color);
 }
 .guessCountMessage {
   margin-bottom: var(--bottom-margin);

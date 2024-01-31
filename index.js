@@ -8,6 +8,7 @@ const form = document.getElementById("guessForm");
 const inputLetter = document.getElementById("inputLetter");
 let guessLetters = [];
 let positions = [3, 4];
+let enableForm = true;
 
 guessCountMessage.innerHTML = `You have ${guessCount} guess remaining`;
 
@@ -15,6 +16,10 @@ showCorrectGuess(positions);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (!enableForm) {
+    return;
+  }
+
   guessCount--;
   if (guessCount >= 0) {
     const updatedLetters = [...guessLetters, inputLetter.value.toUpperCase()];
@@ -32,6 +37,7 @@ form.addEventListener("submit", (event) => {
     }
     showCorrectGuess(positions);
     if (positions.length === letters.length) {
+      enableForm = false;
       inputLetter.disabled = true;
     }
     guessCountMessage.innerHTML =
@@ -54,8 +60,8 @@ function showCorrectGuess(positions) {
       (letter, index) =>
         `${
           positions.includes(index)
-            ? `<span id=${index}>${letter}</span>`
-            : `<span id=${index}>*</span>`
+            ? `<span class="correct-letter" id=${index}>${letter}</span>`
+            : `<span class="correct-letter" id=${index}>*</span>`
         }`
     )
     .join(" ");
