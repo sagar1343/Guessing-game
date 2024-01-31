@@ -100,3 +100,8 @@ button {
 button:hover {
   background-color: #ff7e05;
 }
+@media screen and (max-width: 546px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
