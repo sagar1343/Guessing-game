@@ -104,4 +104,11 @@ button:hover {
   .container {
     padding-inline: 1rem;
   }
+  h1 {
+    white-space: nowrap;
+    padding: 0.2rem;
+  }
+  div.message {
+    white-space: nowrap;
+  }
 }
